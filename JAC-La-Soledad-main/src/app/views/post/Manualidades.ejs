@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="/resources/css/styles.css" rel="stylesheet">
+    <link href="/resources/css/main.css" rel="stylesheet">
+    <a class="navbar-brand" href="/"><img src="/resources/assets/img/Logo.png" alt="" width="8%" class="align-text-middle"></a>
+    <title>Document</title>
+</head>
+<body>
+    
+<!--Mascara de transparencia-->
+<div class="mask" style="background-color: rgba(104, 64, 128, 0.5); min-height: 90vh;">
+    <div class="container p-4">
+        <div style="width: 50%; margin: auto;">
+
+    <div class="card">
+        <div class="card-header">
+<div class="card-title">
+    <h2>Grupo Manualidades</h2>
+</div>
+</div>
+    <div class="card-body"> 
+        
+    
+    <p style="margin-top: 20px;"></pstyle>Es un grupo que se creó gracias a presupuesto participativo de la comuna 12 el América donde hacían una oferta institucional de varios talleres de manualidades y una inscripción citaban en la comunidad y las primeras 30 personas que se inscribieran eran las que accedían o tenían la oportunidad, en este taller hicieron manualidades como tapetes para mesas de comedores, cojines y entre otras cositas lograron hacer. Fueron dirigidos a mujeres jóvenes y adultas.
+            <article style="margin-top: 20px;"> 
+                <button id="btn-abrir-popup" class="btn btn-primary">UNETE AL GRUPO</button>
+                
+            </article>
+    
+            <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h3>UNETE AL GRUPO</h3>
+                    <form action="/Unirme" method="POST">
+                        <div class="contenedor-inputs">
+                            <input type="text" placeholder="Nombre nompleto"name="inputName" required>
+                            <input type="email" placeholder="Correo"name="inputEmail" required>
+                            <select class="form-select" style="margin-bottom: 20px;" id="Operacion" name="inputGrupo" required>
+                                <option value="Manualidades">Grupo Manualidades</option>
+                                
+                              </select>
+                    </div>
+                        <input type="submit" class="btn-submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+        <script> 
+    var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+	overlay = document.getElementById('overlay'),
+	popup = document.getElementById('popup'),
+	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+
+    btnAbrirPopup.addEventListener('click', function(){
+	overlay.classList.add('active');
+	popup.classList.add('active');
+});
+
+    btnCerrarPopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+});
+        </script>
+    </div>
+</div>
+</body>
+
+
+</html>
